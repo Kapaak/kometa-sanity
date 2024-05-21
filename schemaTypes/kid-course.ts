@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import {User as icon} from '@phosphor-icons/react'
+import {SwimmingPool as icon} from '@phosphor-icons/react'
 
 export default defineType({
   name: 'kidCourse',
