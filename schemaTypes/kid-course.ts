@@ -19,6 +19,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'image',
+      title: 'Obrázek bazénu',
+      type: 'imageAlt',
+    }),
+    defineField({
       name: 'privateSwimmingPool',
       title: 'Jedná se o školní bazén?',
       description:
