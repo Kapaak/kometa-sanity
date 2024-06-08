@@ -1,6 +1,6 @@
 import {Flex, Box, Text, Badge} from '@sanity/ui'
 import {PreviewProps} from 'sanity'
-import {joinValues} from '../utils'
+import {convertDayIdToName, joinValues} from '../utils'
 
 type FaqPreviewProps = PreviewProps & {
   dayId: number
@@ -39,20 +39,4 @@ export function CoursePreview(props: FaqPreviewProps) {
       </Badge>
     </Flex>
   )
-}
-function convertDayIdToName(dayId: number): string {
-  switch (dayId) {
-    case 1:
-      return 'Pondělí'
-    case 2:
-      return 'Úterý'
-    case 3:
-      return 'Středa'
-    case 4:
-      return 'Čtvrtek'
-    case 5:
-      return 'Pátek'
-    default:
-      return ''
-  }
 }

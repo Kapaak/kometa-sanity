@@ -27,3 +27,7 @@
 
 # Dotenv and similar local-only files
 *.local
+
+# For FE types generation
+schema.json
+sanity-typegen.json
