@@ -7,13 +7,14 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './src/structure'
 import {schemaTemplates} from './schemaTemplates'
+import {googleMapsInput} from '@sanity/google-maps-input'
 
 export default defineConfig({
   name: 'default',
   title: 'kometa-web',
 
-  projectId: '9vkkla99',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID ?? '',
+  dataset: process.env.SANITY_STUDIO_DATASET ?? '',
 
   plugins: [
     structureTool({
@@ -22,6 +23,15 @@ export default defineConfig({
     csCZLocale(),
     visionTool(),
     media(),
+    googleMapsInput({
+      apiKey: process.env.SANITY_STUDIO_GOOGLE_MAPS_API_KEY ?? '',
+      defaultLocation: {
+        lat: 49.195061,
+        lng: 16.606836,
+      },
+      defaultZoom: 13,
+      defaultLocale: 'cs-CZ',
+    }),
   ],
 
   tools: (prev, {currentUser}) => {

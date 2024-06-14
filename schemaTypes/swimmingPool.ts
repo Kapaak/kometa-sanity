@@ -14,6 +14,17 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Název bazénu v URL',
+      description: "Vygenerujte tuto URL kliknutím na tlačítko 'Vygenerovat'",
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'url',
       title: 'Odkaz na hlavní stránku',
       type: 'string',
@@ -37,6 +48,11 @@ export default defineType({
       description: 'Pokud jsou školy nebo školky dostupné, zaklikněte.',
       type: 'boolean',
       initialValue: false,
+    }),
+    defineField({
+      name: 'location',
+      title: 'Lokalita bazénu',
+      type: 'geopoint',
     }),
   ],
   preview: {
