@@ -6,7 +6,7 @@ export const structure = (S: StructureBuilder) =>
     .title('Kometa web - Studio')
     .items([
       S.listItem()
-        .title('Kurzy pro děti - updated')
+        .title('Kurzy pro děti')
         .icon(PersonSimpleSwim)
         .child(
           S.documentTypeList('swimmingPool').child((swimmingPoolId) =>
