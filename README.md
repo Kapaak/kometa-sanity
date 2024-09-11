@@ -1,5 +1,10 @@
-# How to generate FE types
 
+
+# CMS for Kometa swimming lessons
+Front-end app - https://github.com/Kapaak/kometa-web/blob/main/README.md
+
+
+### How to generate schema types
 https://www.sanity.io/learn/course/typescripted-content/configuring-sanity-typegen-for-multiple-folder-projects
 
 - generate schema.json -> yarn extract-schema
