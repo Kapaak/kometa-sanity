@@ -1,7 +1,7 @@
 
 
 # CMS for Kometa swimming lessons
-Front-end app - https://github.com/Kapaak/kometa-web/blob/main/README.md
+Front-end app - https://github.com/Kapaak/kometa-web
 
 
 ### How to generate schema types
