@@ -5,6 +5,7 @@ import {siteSettings} from './siteSettings'
 import {colors} from './colors'
 import {navigation} from './navigation'
 import {kidsCourse2} from './kidsCourse'
+import blog from './blog'
 
 export const schemaTypes = [
   //Document types
@@ -14,6 +15,7 @@ export const schemaTypes = [
   colors,
   navigation,
   kidsCourse2,
+  blog,
   //Custom types
   imageAlt,
   priceType,
