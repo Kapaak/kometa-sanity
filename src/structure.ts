@@ -13,6 +13,7 @@ const filterTypes = [
   'fileUpload',
   'faq',
   'infoBar',
+  'preliminaryCourse',
 ]
 
 export const structure = (S: StructureBuilder) =>
@@ -68,12 +69,68 @@ export const structure = (S: StructureBuilder) =>
                                 ]),
                             ),
                           S.listItem()
-                            .title('Kondiční') // Condition category
+                            .title('Kondiční')
                             .child(() =>
                               S.documentTypeList('kidsCourse')
                                 .title('Kondiční - Kurzy')
                                 .filter(
                                   '_type == "kidsCourse" && categoryId == "condition" && swimmingPool._ref == $swimmingPoolId',
+                                )
+                                .params({swimmingPoolId})
+                                .initialValueTemplates([
+                                  S.initialValueTemplateItem('kids-course-template', {
+                                    swimmingPoolId,
+                                    categoryId: 'condition',
+                                  }),
+                                ]),
+                            ),
+                        ]),
+                    ),
+                  S.listItem()
+                    .title('Předbězné lekce')
+                    .child(
+                      S.list()
+                        .title('Kategorie')
+                        .items([
+                          S.listItem()
+                            .title('Začátečníci')
+                            .child(() =>
+                              S.documentTypeList('preliminaryCourse')
+                                .title('Začátečníci - Kurzy')
+                                .filter(
+                                  '_type == "preliminaryCourse" && categoryId == "basic" && swimmingPool._ref == $swimmingPoolId',
+                                )
+                                .params({swimmingPoolId})
+                                .initialValueTemplates([
+                                  S.initialValueTemplateItem('kids-course-template', {
+                                    swimmingPoolId,
+                                    categoryId: 'basic',
+                                  }),
+                                ]),
+                            ),
+                          S.listItem()
+                            .title('Pokročilí')
+                            .child(() =>
+                              S.documentTypeList('preliminaryCourse')
+                                .title('Pokročilí - Kurzy')
+                                .filter(
+                                  '_type == "preliminaryCourse" && categoryId == "advanced" && swimmingPool._ref == $swimmingPoolId',
+                                )
+                                .params({swimmingPoolId})
+                                .initialValueTemplates([
+                                  S.initialValueTemplateItem('kids-course-template', {
+                                    swimmingPoolId,
+                                    categoryId: 'advanced',
+                                  }),
+                                ]),
+                            ),
+                          S.listItem()
+                            .title('Kondiční')
+                            .child(() =>
+                              S.documentTypeList('preliminaryCourse')
+                                .title('Kondiční - Kurzy')
+                                .filter(
+                                  '_type == "preliminaryCourse" && categoryId == "condition" && swimmingPool._ref == $swimmingPoolId',
                                 )
                                 .params({swimmingPoolId})
                                 .initialValueTemplates([

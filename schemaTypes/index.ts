@@ -4,7 +4,9 @@ import {
   ratingType,
   faqObjectType,
   imageAlt,
+  yearMonthRange,
   availableIconType,
+  lectureFrequencyPricing,
   priceType,
 } from '../customTypes'
 import camps from './camps'
@@ -18,6 +20,7 @@ import infoBar from './settings/info-bar'
 import home from './settings/home'
 import fileUpload from './settings/file-upload'
 import faq from './settings/faq'
+import {preliminaryCourse} from './settings/preliminary-course'
 
 export const schemaTypes = [
   //Document types
@@ -32,7 +35,7 @@ export const schemaTypes = [
   fileUpload,
   faq,
   infoBar,
-  // perliminaryCourse, -- tohle jeste pridat do tech obecnych kurzu
+  preliminaryCourse,
 
   //Custom types
   imageAlt,
@@ -42,4 +45,6 @@ export const schemaTypes = [
   ratingType,
   faqObjectType,
   availableIconType,
+  yearMonthRange,
+  lectureFrequencyPricing,
 ]
