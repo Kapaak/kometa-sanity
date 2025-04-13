@@ -3,7 +3,7 @@ import {SwimmingPool as icon} from '@phosphor-icons/react'
 
 export default defineType({
   name: 'swimmingPool',
-  title: 'Bazény',
+  title: 'Kde plaveme',
   type: 'document',
   icon,
   fields: [
