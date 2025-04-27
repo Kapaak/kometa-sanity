@@ -1,5 +1,6 @@
 import {PersonSimpleSwim} from '@phosphor-icons/react'
 import {StructureBuilder} from 'sanity/structure'
+import {swimmingCategories} from '../constants/categories'
 
 const filterTypes = [
   'siteSettings',
@@ -35,112 +36,52 @@ export const structure = (S: StructureBuilder) =>
                     .child(
                       S.list()
                         .title('Kategorie')
-                        .items([
-                          S.listItem()
-                            .title('Začátečníci')
-                            .child(() =>
-                              S.documentTypeList('kidsCourse')
-                                .title('Začátečníci - Kurzy')
-                                .filter(
-                                  '_type == "kidsCourse" && categoryId == "basic" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'basic',
-                                  }),
-                                ]),
-                            ),
-                          S.listItem()
-                            .title('Pokročilí')
-                            .child(() =>
-                              S.documentTypeList('kidsCourse')
-                                .title('Pokročilí - Kurzy')
-                                .filter(
-                                  '_type == "kidsCourse" && categoryId == "advanced" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'advanced',
-                                  }),
-                                ]),
-                            ),
-                          S.listItem()
-                            .title('Kondiční')
-                            .child(() =>
-                              S.documentTypeList('kidsCourse')
-                                .title('Kondiční - Kurzy')
-                                .filter(
-                                  '_type == "kidsCourse" && categoryId == "condition" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'condition',
-                                  }),
-                                ]),
-                            ),
-                        ]),
+                        .items(
+                          swimmingCategories.map((category) =>
+                            S.listItem()
+                              .title(category.label)
+                              .child(() =>
+                                S.documentTypeList('kidsCourse')
+                                  .title(`${category.label} - Kurzy`)
+                                  .filter(
+                                    '_type == "kidsCourse" && categoryId == $categoryId && swimmingPool._ref == $swimmingPoolId',
+                                  )
+                                  .params({swimmingPoolId, categoryId: category.name})
+                                  .initialValueTemplates([
+                                    S.initialValueTemplateItem('kids-course-template', {
+                                      swimmingPoolId,
+                                      categoryId: category.name,
+                                    }),
+                                  ]),
+                              ),
+                          ),
+                        ),
                     ),
                   S.listItem()
                     .title('Předbězné lekce')
                     .child(
                       S.list()
                         .title('Kategorie')
-                        .items([
-                          S.listItem()
-                            .title('Začátečníci')
-                            .child(() =>
-                              S.documentTypeList('preliminaryCourse')
-                                .title('Začátečníci - Kurzy')
-                                .filter(
-                                  '_type == "preliminaryCourse" && categoryId == "basic" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'basic',
-                                  }),
-                                ]),
-                            ),
-                          S.listItem()
-                            .title('Pokročilí')
-                            .child(() =>
-                              S.documentTypeList('preliminaryCourse')
-                                .title('Pokročilí - Kurzy')
-                                .filter(
-                                  '_type == "preliminaryCourse" && categoryId == "advanced" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'advanced',
-                                  }),
-                                ]),
-                            ),
-                          S.listItem()
-                            .title('Kondiční')
-                            .child(() =>
-                              S.documentTypeList('preliminaryCourse')
-                                .title('Kondiční - Kurzy')
-                                .filter(
-                                  '_type == "preliminaryCourse" && categoryId == "condition" && swimmingPool._ref == $swimmingPoolId',
-                                )
-                                .params({swimmingPoolId})
-                                .initialValueTemplates([
-                                  S.initialValueTemplateItem('kids-course-template', {
-                                    swimmingPoolId,
-                                    categoryId: 'condition',
-                                  }),
-                                ]),
-                            ),
-                        ]),
+                        .items(
+                          swimmingCategories.map((category) =>
+                            S.listItem()
+                              .title(category.label)
+                              .child(() =>
+                                S.documentTypeList('preliminaryCourse')
+                                  .title(`${category.label} - Kurzy`)
+                                  .filter(
+                                    '_type == "preliminaryCourse" && categoryId == $categoryId && swimmingPool._ref == $swimmingPoolId',
+                                  )
+                                  .params({swimmingPoolId, categoryId: category.name})
+                                  .initialValueTemplates([
+                                    S.initialValueTemplateItem('kids-course-template', {
+                                      swimmingPoolId,
+                                      categoryId: category.name,
+                                    }),
+                                  ]),
+                              ),
+                          ),
+                        ),
                     ),
                   S.documentTypeListItem('home').child(
                     S.documentTypeList('home')

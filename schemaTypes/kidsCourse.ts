@@ -1,5 +1,7 @@
 import {defineField, defineType} from 'sanity'
 import {convertDayIdToName, joinValues} from '../utils'
+import {swimmingCategories} from '../constants/categories'
+import {kidsCourseDurationsFrom, kidsCourseDurationsTo} from '../constants/course-duration'
 
 export const kidsCourse2 = defineType({
   name: 'kidsCourse',
@@ -48,21 +50,10 @@ export const kidsCourse2 = defineType({
       validation: (Rule) => Rule.required(),
       type: 'string',
       options: {
-        list: [
-          {title: '15:00', value: '15:00'},
-          {title: '15:15', value: '15:15'},
-          {title: '15:30', value: '15:30'},
-          {title: '15:45', value: '15:45'},
-          {title: '16:00', value: '16:00'},
-          {title: '16:15', value: '16:15'},
-          {title: '16:30', value: '16:30'},
-          {title: '16:45', value: '16:45'},
-          {title: '17:00', value: '17:00'},
-          {title: '17:15', value: '17:15'},
-          {title: '17:30', value: '17:30'},
-          {title: '17:45', value: '17:45'},
-          {title: '18:00', value: '18:00'},
-        ],
+        list: kidsCourseDurationsFrom.map((duration) => ({
+          title: duration.title,
+          value: duration.value,
+        })),
       },
     }),
     defineField({
@@ -71,22 +62,10 @@ export const kidsCourse2 = defineType({
       validation: (Rule) => Rule.required(),
       type: 'string',
       options: {
-        list: [
-          {title: '15:45', value: '15:45'},
-          {title: '16:00', value: '16:00'},
-          {title: '16:15', value: '16:15'},
-          {title: '16:30', value: '16:30'},
-          {title: '16:45', value: '16:45'},
-          {title: '17:00', value: '17:00'},
-          {title: '17:15', value: '17:15'},
-          {title: '17:30', value: '17:30'},
-          {title: '17:45', value: '17:45'},
-          {title: '18:00', value: '18:00'},
-          {title: '18:15', value: '18:15'},
-          {title: '18:30', value: '18:30'},
-          {title: '18:45', value: '18:45'},
-          {title: '19:00', value: '19:00'},
-        ],
+        list: kidsCourseDurationsTo.map((duration) => ({
+          title: duration.title,
+          value: duration.value,
+        })),
       },
     }),
     defineField({
@@ -119,11 +98,10 @@ export const kidsCourse2 = defineType({
       title: 'Kategorie',
       type: 'string',
       options: {
-        list: [
-          {title: 'Začátečníci', value: 'basic'},
-          {title: 'Pokročilí', value: 'advanced'},
-          {title: 'Kondičky', value: 'condition'},
-        ],
+        list: swimmingCategories.map((category) => ({
+          title: category.label,
+          value: category.name,
+        })),
       },
     }),
   ],
