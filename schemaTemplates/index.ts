@@ -3,6 +3,7 @@ import {fileUploadTemplate} from './fileUploadTemplate'
 import {homeTemplate} from './homeTemplate'
 import {faqTemplate} from './faqTemplate'
 import {infoBarTemplate} from './infoBarTemplate'
+import {skillRequirementTemplate} from './skillRequirementTemplate'
 
 export const schemaTemplates = [
   kidsCourseTemplate,
@@ -10,4 +11,5 @@ export const schemaTemplates = [
   homeTemplate,
   faqTemplate,
   infoBarTemplate,
+  skillRequirementTemplate,
 ]

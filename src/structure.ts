@@ -83,6 +83,30 @@ export const structure = (S: StructureBuilder) =>
                           ),
                         ),
                     ),
+                  S.listItem()
+                    .title('Potřebné dovednosti')
+                    .child(
+                      S.list()
+                        .title('Kategorie')
+                        .items(
+                          swimmingCategories.map((category) =>
+                            S.listItem()
+                              .title(category.label)
+                              .child(() =>
+                                S.documentWithInitialValueTemplate(
+                                  'category-skill-required-template',
+                                  {
+                                    swimmingPoolId,
+                                    categoryId: category.name,
+                                  },
+                                )
+                                  .schemaType('categorySkillRequirement')
+                                  .documentId(`${category.name}-${swimmingPoolId}`)
+                                  .title(`${category.label} - Dovednosti`),
+                              ),
+                          ),
+                        ),
+                    ),
                   S.documentTypeListItem('home').child(
                     S.documentTypeList('home')
                       .filter('_type == "home" && swimmingPool._ref == $swimmingPoolId')

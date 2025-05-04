@@ -21,6 +21,7 @@ import home from './settings/home'
 import fileUpload from './settings/file-upload'
 import faq from './settings/faq'
 import {preliminaryCourse} from './settings/preliminary-course'
+import {categorySkillRequirement} from './settings/category-skill-requirement'
 
 export const schemaTypes = [
   //Document types
@@ -36,6 +37,7 @@ export const schemaTypes = [
   faq,
   infoBar,
   preliminaryCourse,
+  categorySkillRequirement,
 
   //Custom types
   imageAlt,
