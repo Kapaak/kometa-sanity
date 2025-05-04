@@ -43,6 +43,21 @@ export default defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'totalLength',
+      title: 'Délka bazénu v metrech',
+      type: 'number',
+    }),
+    defineField({
+      name: 'depth',
+      title: 'Hloubka bazénu v metrech',
+      type: 'number',
+    }),
+    defineField({
+      name: 'temperature',
+      title: 'Teplota vody ve °C',
+      type: 'number',
+    }),
+    defineField({
       name: 'isSchoolOrKindergartenAvailable',
       title: 'Školy nebo školky jsou dostupné?',
       description: 'Pokud jsou školy nebo školky dostupné, zaklikněte.',
