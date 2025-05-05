@@ -153,6 +153,105 @@
     }
   },
   {
+    "name": "lectureFrequencyPricing",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "lectureFrequencyPricing"
+          }
+        },
+        "title": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "lectureFrequency": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "price": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
+    "name": "yearMonthRange",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "yearMonthRange"
+          }
+        },
+        "yearMonthFrom": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "object",
+            "attributes": {
+              "year": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "month": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              }
+            }
+          },
+          "optional": true
+        },
+        "yearMonthTo": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "object",
+            "attributes": {
+              "year": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "month": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              }
+            }
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "availableIconType",
     "type": "type",
     "value": {
@@ -680,6 +779,432 @@
     }
   },
   {
+    "name": "categorySkillRequirement",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "categorySkillRequirement"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "skillRequirement": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "string"
+          }
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
+        },
+        "optional": true
+      },
+      "categoryId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "basic"
+            },
+            {
+              "type": "string",
+              "value": "advanced"
+            },
+            {
+              "type": "string",
+              "value": "condition"
+            },
+            {
+              "type": "string",
+              "value": "adult"
+            },
+            {
+              "type": "string",
+              "value": "kindergarten"
+            },
+            {
+              "type": "string",
+              "value": "school"
+            }
+          ]
+        },
+        "optional": true
+      }
+    }
+  },
+  {
+    "name": "preliminaryCourse",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "preliminaryCourse"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "dayId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "number",
+              "value": 1
+            },
+            {
+              "type": "number",
+              "value": 2
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 4
+            },
+            {
+              "type": "number",
+              "value": 5
+            }
+          ]
+        },
+        "optional": true
+      },
+      "slug": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "slug"
+        },
+        "optional": true
+      },
+      "activeDate": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "activeDateFrom": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              },
+              "optional": true
+            },
+            "activeDateTo": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              },
+              "optional": true
+            }
+          }
+        },
+        "optional": true
+      },
+      "age": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "ageCategory"
+        },
+        "optional": true
+      },
+      "timeFrom": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "15:00"
+            },
+            {
+              "type": "string",
+              "value": "15:15"
+            },
+            {
+              "type": "string",
+              "value": "15:30"
+            },
+            {
+              "type": "string",
+              "value": "15:45"
+            },
+            {
+              "type": "string",
+              "value": "16:00"
+            },
+            {
+              "type": "string",
+              "value": "16:15"
+            },
+            {
+              "type": "string",
+              "value": "16:30"
+            },
+            {
+              "type": "string",
+              "value": "16:45"
+            },
+            {
+              "type": "string",
+              "value": "17:00"
+            },
+            {
+              "type": "string",
+              "value": "17:15"
+            },
+            {
+              "type": "string",
+              "value": "17:30"
+            },
+            {
+              "type": "string",
+              "value": "17:45"
+            },
+            {
+              "type": "string",
+              "value": "18:00"
+            }
+          ]
+        },
+        "optional": true
+      },
+      "timeTo": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "15:45"
+            },
+            {
+              "type": "string",
+              "value": "16:00"
+            },
+            {
+              "type": "string",
+              "value": "16:15"
+            },
+            {
+              "type": "string",
+              "value": "16:30"
+            },
+            {
+              "type": "string",
+              "value": "16:45"
+            },
+            {
+              "type": "string",
+              "value": "17:00"
+            },
+            {
+              "type": "string",
+              "value": "17:15"
+            },
+            {
+              "type": "string",
+              "value": "17:30"
+            },
+            {
+              "type": "string",
+              "value": "17:45"
+            },
+            {
+              "type": "string",
+              "value": "18:00"
+            },
+            {
+              "type": "string",
+              "value": "18:15"
+            },
+            {
+              "type": "string",
+              "value": "18:30"
+            },
+            {
+              "type": "string",
+              "value": "18:45"
+            },
+            {
+              "type": "string",
+              "value": "19:00"
+            }
+          ]
+        },
+        "optional": true
+      },
+      "isFull": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "boolean"
+        },
+        "optional": true
+      },
+      "price": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "price"
+        },
+        "optional": true
+      },
+      "discount": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
+        },
+        "optional": true
+      },
+      "categoryId": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "union",
+          "of": [
+            {
+              "type": "string",
+              "value": "basic"
+            },
+            {
+              "type": "string",
+              "value": "advanced"
+            },
+            {
+              "type": "string",
+              "value": "condition"
+            },
+            {
+              "type": "string",
+              "value": "adult"
+            },
+            {
+              "type": "string",
+              "value": "kindergarten"
+            },
+            {
+              "type": "string",
+              "value": "school"
+            }
+          ]
+        },
+        "optional": true
+      }
+    }
+  },
+  {
     "name": "infoBar",
     "type": "document",
     "attributes": {
@@ -732,6 +1257,36 @@
         "type": "objectAttribute",
         "value": {
           "type": "boolean"
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
         },
         "optional": true
       }
@@ -806,6 +1361,36 @@
         "value": {
           "type": "inline",
           "name": "rating"
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
         },
         "optional": true
       }
@@ -906,6 +1491,36 @@
           "name": "rating"
         },
         "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
+        },
+        "optional": true
       }
     }
   },
@@ -963,6 +1578,36 @@
         "value": {
           "type": "inline",
           "name": "rating"
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
         },
         "optional": true
       },
@@ -2178,6 +2823,18 @@
             {
               "type": "string",
               "value": "condition"
+            },
+            {
+              "type": "string",
+              "value": "adult"
+            },
+            {
+              "type": "string",
+              "value": "kindergarten"
+            },
+            {
+              "type": "string",
+              "value": "school"
             }
           ]
         },
@@ -2658,6 +3315,27 @@
         "type": "objectAttribute",
         "value": {
           "type": "boolean"
+        },
+        "optional": true
+      },
+      "totalLength": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
+        },
+        "optional": true
+      },
+      "depth": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
+        },
+        "optional": true
+      },
+      "temperature": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
         },
         "optional": true
       },

@@ -11,7 +11,7 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
     "extract-schema": "sanity schema extract",
-    "generate-fe-types": "sanity typegen generate"
+    "gen:fe-types": "sanity typegen generate"
   },
   "keywords": [
     "sanity"
