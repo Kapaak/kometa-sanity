@@ -16,12 +16,7 @@ import {colors} from './colors'
 import {navigation} from './navigation'
 import {kidsCourse2} from './kidsCourse'
 import blog from './blog'
-import infoBar from './settings/info-bar'
-import home from './settings/home'
-import fileUpload from './settings/file-upload'
-import faq from './settings/faq'
-import {preliminaryCourse} from './settings/preliminary-course'
-import {categorySkillRequirement} from './settings/category-skill-requirement'
+import {preliminaryCourse, swimmingPoolInfoBar, swimmingPoolDetail} from './swimming-pool'
 
 export const schemaTypes = [
   //Document types
@@ -32,12 +27,9 @@ export const schemaTypes = [
   navigation,
   kidsCourse2,
   blog,
-  home,
-  fileUpload,
-  faq,
-  infoBar,
+  swimmingPoolInfoBar,
+  swimmingPoolDetail,
   preliminaryCourse,
-  categorySkillRequirement,
 
   //Custom types
   imageAlt,

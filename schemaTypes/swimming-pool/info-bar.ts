@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 
-export default defineType({
+export const swimmingPoolInfoBar = defineType({
   name: 'infoBar',
   title: 'Informační lišta',
   type: 'document',

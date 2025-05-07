@@ -5,10 +5,10 @@ type PostTemplate = {
   categoryId: string
 }
 
-export const skillRequirementTemplate: Template = {
-  id: 'category-skill-required-template',
-  title: 'Filled Post',
-  schemaType: 'categorySkillRequirement',
+export const swimmingPoolDetailTemplate: Template = {
+  id: 'swimming-pool-details-template',
+  title: '',
+  schemaType: 'swimmingPoolDetail',
   value: (params: PostTemplate) => ({
     swimmingPool: {_type: 'reference', _ref: params.swimmingPoolId},
     categoryId: params.categoryId,

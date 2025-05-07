@@ -15,6 +15,7 @@ const filterTypes = [
   'faq',
   'infoBar',
   'preliminaryCourse',
+  'swimmingPoolDetail',
 ]
 
 export const structure = (S: StructureBuilder) =>
@@ -83,8 +84,19 @@ export const structure = (S: StructureBuilder) =>
                           ),
                         ),
                     ),
+                  //TODO: aktualne neresim
+                  // S.documentTypeListItem('infoBar').child(
+                  //   S.documentTypeList('infoBar')
+                  //     .filter('_type == "infoBar" && swimmingPool._ref == $swimmingPoolId')
+                  //     .params({swimmingPoolId})
+                  //     .initialValueTemplates([
+                  //       S.initialValueTemplateItem('info-bar-template', {
+                  //         swimmingPoolId,
+                  //       }),
+                  //     ]),
+                  // ),
                   S.listItem()
-                    .title('Potřebné dovednosti')
+                    .title('Data ke stránce')
                     .child(
                       S.list()
                         .title('Kategorie')
@@ -94,59 +106,18 @@ export const structure = (S: StructureBuilder) =>
                               .title(category.label)
                               .child(() =>
                                 S.documentWithInitialValueTemplate(
-                                  'category-skill-required-template',
+                                  'swimming-pool-details-template',
                                   {
                                     swimmingPoolId,
                                     categoryId: category.name,
                                   },
                                 )
-                                  .schemaType('categorySkillRequirement')
                                   .documentId(`${category.name}-${swimmingPoolId}`)
-                                  .title(`${category.label} - Dovednosti`),
+                                  .title(category.label),
                               ),
                           ),
                         ),
                     ),
-                  S.documentTypeListItem('home').child(
-                    S.documentTypeList('home')
-                      .filter('_type == "home" && swimmingPool._ref == $swimmingPoolId')
-                      .params({swimmingPoolId})
-                      .initialValueTemplates([
-                        S.initialValueTemplateItem('home-template', {
-                          swimmingPoolId,
-                        }),
-                      ]),
-                  ),
-                  S.documentTypeListItem('fileUpload').child(
-                    S.documentTypeList('fileUpload')
-                      .filter('_type == "fileUpload" && swimmingPool._ref == $swimmingPoolId')
-                      .params({swimmingPoolId})
-                      .initialValueTemplates([
-                        S.initialValueTemplateItem('file-upload-template', {
-                          swimmingPoolId,
-                        }),
-                      ]),
-                  ),
-                  S.documentTypeListItem('faq').child(
-                    S.documentTypeList('faq')
-                      .filter('_type == "faq" && swimmingPool._ref == $swimmingPoolId')
-                      .params({swimmingPoolId})
-                      .initialValueTemplates([
-                        S.initialValueTemplateItem('faq-template', {
-                          swimmingPoolId,
-                        }),
-                      ]),
-                  ),
-                  S.documentTypeListItem('infoBar').child(
-                    S.documentTypeList('infoBar')
-                      .filter('_type == "infoBar" && swimmingPool._ref == $swimmingPoolId')
-                      .params({swimmingPoolId})
-                      .initialValueTemplates([
-                        S.initialValueTemplateItem('info-bar-template', {
-                          swimmingPoolId,
-                        }),
-                      ]),
-                  ),
                 ]),
             ),
         ),
