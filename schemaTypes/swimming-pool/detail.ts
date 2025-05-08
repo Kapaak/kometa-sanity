@@ -46,6 +46,19 @@ export const swimmingPoolDetail = defineType({
       type: 'file',
     }),
     defineField({
+      name: 'imageGallery',
+      title: 'Galerie obrázků',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {
+            accept: 'image/*',
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'fileUploads',
       title: 'Dokumenty',
       type: 'array',
