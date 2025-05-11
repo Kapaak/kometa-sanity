@@ -94,6 +94,16 @@ export const swimmingPoolMainPage = defineType({
       type: 'array',
       of: [
         {
+          type: 'faqObjectType',
+        },
+      ],
+    }),
+    defineField({
+      name: 'basicInformation',
+      title: 'Základní informace',
+      type: 'array',
+      of: [
+        {
           type: 'object',
           fields: [
             {
@@ -102,10 +112,9 @@ export const swimmingPoolMainPage = defineType({
               type: 'string',
             },
             defineField({
-              name: 'questions',
-              title: 'Otázky',
-              type: 'array',
-              of: [{type: 'faqObjectType'}],
+              name: 'text',
+              title: 'Text',
+              type: 'blockContent',
             }),
           ],
         },

@@ -86,13 +86,13 @@ export const structure = (S: StructureBuilder) =>
                         ),
                     ),
                   S.listItem()
-                    .title('Data ke stránce')
+                    .title('Data k hlavní stránce')
                     .child(
                       S.documentWithInitialValueTemplate('swimming-pool-main-template', {
                         swimmingPoolId,
                       })
                         .documentId(`swimmingPoolMainPage-${swimmingPoolId}`)
-                        .title('Data ke stránce'),
+                        .title('Data k hlavní stránce'),
                     ),
                   S.listItem()
                     .title('Data ke kategorii')
