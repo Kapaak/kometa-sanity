@@ -7,7 +7,7 @@ type PostTemplate = {
 
 export const swimmingPoolDetailTemplate: Template = {
   id: 'swimming-pool-details-template',
-  title: '',
+  title: 'Whatever',
   schemaType: 'swimmingPoolDetail',
   value: (params: PostTemplate) => ({
     swimmingPool: {_type: 'reference', _ref: params.swimmingPoolId},

@@ -1,15 +1,11 @@
 import {kidsCourseTemplate} from './kidsCourseTemplate'
-import {fileUploadTemplate} from './fileUploadTemplate'
-import {homeTemplate} from './homeTemplate'
-import {faqTemplate} from './faqTemplate'
 import {infoBarTemplate} from './infoBarTemplate'
-import {swimmingPoolDetailTemplate} from './skillRequirementTemplate'
+import {swimmingPoolDetailTemplate} from './swimming-pool-detail-template'
+import {swimmingPoolMainPageTemplate} from './swimming-pool-main-template'
 
 export const schemaTemplates = [
   kidsCourseTemplate,
-  // fileUploadTemplate,
-  // homeTemplate,
-  // faqTemplate,
   infoBarTemplate,
   swimmingPoolDetailTemplate,
+  swimmingPoolMainPageTemplate,
 ]

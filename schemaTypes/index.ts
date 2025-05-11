@@ -16,7 +16,12 @@ import {colors} from './colors'
 import {navigation} from './navigation'
 import {kidsCourse2} from './kidsCourse'
 import blog from './blog'
-import {preliminaryCourse, swimmingPoolInfoBar, swimmingPoolDetail} from './swimming-pool'
+import {
+  preliminaryCourse,
+  swimmingPoolInfoBar,
+  swimmingPoolDetail,
+  swimmingPoolMainPage,
+} from './swimming-pool'
 
 export const schemaTypes = [
   //Document types
@@ -30,6 +35,7 @@ export const schemaTypes = [
   swimmingPoolInfoBar,
   swimmingPoolDetail,
   preliminaryCourse,
+  swimmingPoolMainPage,
 
   //Custom types
   imageAlt,

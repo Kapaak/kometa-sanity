@@ -16,6 +16,7 @@ const filterTypes = [
   'infoBar',
   'preliminaryCourse',
   'swimmingPoolDetail',
+  'swimmingPoolMainPage',
 ]
 
 export const structure = (S: StructureBuilder) =>
@@ -84,19 +85,17 @@ export const structure = (S: StructureBuilder) =>
                           ),
                         ),
                     ),
-                  //TODO: aktualne neresim
-                  // S.documentTypeListItem('infoBar').child(
-                  //   S.documentTypeList('infoBar')
-                  //     .filter('_type == "infoBar" && swimmingPool._ref == $swimmingPoolId')
-                  //     .params({swimmingPoolId})
-                  //     .initialValueTemplates([
-                  //       S.initialValueTemplateItem('info-bar-template', {
-                  //         swimmingPoolId,
-                  //       }),
-                  //     ]),
-                  // ),
                   S.listItem()
                     .title('Data ke stránce')
+                    .child(
+                      S.documentWithInitialValueTemplate('swimming-pool-main-template', {
+                        swimmingPoolId,
+                      })
+                        .documentId(`swimmingPoolMainPage-${swimmingPoolId}`)
+                        .title('Data ke stránce'),
+                    ),
+                  S.listItem()
+                    .title('Data ke kategorii')
                     .child(
                       S.list()
                         .title('Kategorie')
