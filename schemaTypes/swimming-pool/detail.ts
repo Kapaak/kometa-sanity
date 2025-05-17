@@ -13,11 +13,6 @@ export const swimmingPoolDetail = defineType({
       of: [{type: 'string', title: 'Dovednost'}],
     }),
     defineField({
-      name: 'sampleTraining',
-      title: 'Vzorový trénink',
-      type: 'file',
-    }),
-    defineField({
       name: 'imageGallery',
       title: 'Galerie obrázků',
       type: 'array',
@@ -28,6 +23,30 @@ export const swimmingPoolDetail = defineType({
             accept: 'image/*',
           },
         },
+      ],
+    }),
+    defineField({
+      name: 'uploadedDocuments',
+      title: 'Dokumenty',
+      type: 'array',
+      of: [
+        defineField({
+          name: 'uploadedDocument',
+          title: 'Dokument',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'label',
+              title: 'Název',
+              type: 'string',
+            }),
+            defineField({
+              name: 'file',
+              title: 'Dokument',
+              type: 'file',
+            }),
+          ],
+        }),
       ],
     }),
     defineField({

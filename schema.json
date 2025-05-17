@@ -779,6 +779,298 @@
     }
   },
   {
+    "name": "swimmingPoolMainPage",
+    "type": "document",
+    "attributes": {
+      "_id": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_type": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string",
+          "value": "swimmingPoolMainPage"
+        }
+      },
+      "_createdAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_updatedAt": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "_rev": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        }
+      },
+      "announcements": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "title": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "visible": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "boolean"
+                },
+                "optional": true
+              },
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "inline",
+                  "name": "blockContent"
+                },
+                "optional": true
+              }
+            },
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "optional": true
+      },
+      "infoBar": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "title": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "visibility": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "boolean"
+                },
+                "optional": true
+              }
+            },
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "optional": true
+      },
+      "fileUploads": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "title": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "file": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "object",
+                  "attributes": {
+                    "asset": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "object",
+                        "attributes": {
+                          "_ref": {
+                            "type": "objectAttribute",
+                            "value": {
+                              "type": "string"
+                            }
+                          },
+                          "_type": {
+                            "type": "objectAttribute",
+                            "value": {
+                              "type": "string",
+                              "value": "reference"
+                            }
+                          },
+                          "_weak": {
+                            "type": "objectAttribute",
+                            "value": {
+                              "type": "boolean"
+                            },
+                            "optional": true
+                          }
+                        },
+                        "dereferencesTo": "sanity.fileAsset"
+                      },
+                      "optional": true
+                    },
+                    "_type": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "string",
+                        "value": "file"
+                      }
+                    }
+                  }
+                },
+                "optional": true
+              }
+            },
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "optional": true
+      },
+      "faq": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "_key": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "rest": {
+              "type": "inline",
+              "name": "faqObjectType"
+            }
+          }
+        },
+        "optional": true
+      },
+      "basicInformation": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "columnTitle": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": true
+              },
+              "text": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "inline",
+                  "name": "blockContent"
+                },
+                "optional": true
+              }
+            },
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "optional": true
+      },
+      "swimmingPool": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "object",
+          "attributes": {
+            "_ref": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string"
+              }
+            },
+            "_type": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "string",
+                "value": "reference"
+              }
+            },
+            "_weak": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "boolean"
+              },
+              "optional": true
+            }
+          },
+          "dereferencesTo": "swimmingPool"
+        },
+        "optional": true
+      }
+    }
+  },
+  {
     "name": "preliminaryCourse",
     "type": "document",
     "attributes": {
@@ -888,6 +1180,58 @@
           "of": [
             {
               "type": "string",
+              "value": "9:00"
+            },
+            {
+              "type": "string",
+              "value": "9:15"
+            },
+            {
+              "type": "string",
+              "value": "9:30"
+            },
+            {
+              "type": "string",
+              "value": "9:45"
+            },
+            {
+              "type": "string",
+              "value": "10:00"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:45"
+            },
+            {
+              "type": "string",
+              "value": "11:00"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:45"
+            },
+            {
+              "type": "string",
+              "value": "12:00"
+            },
+            {
+              "type": "string",
               "value": "15:00"
             },
             {
@@ -949,7 +1293,91 @@
           "of": [
             {
               "type": "string",
-              "value": "15:45"
+              "value": "9:00"
+            },
+            {
+              "type": "string",
+              "value": "9:15"
+            },
+            {
+              "type": "string",
+              "value": "9:30"
+            },
+            {
+              "type": "string",
+              "value": "9:45"
+            },
+            {
+              "type": "string",
+              "value": "10:00"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:45"
+            },
+            {
+              "type": "string",
+              "value": "11:00"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:45"
+            },
+            {
+              "type": "string",
+              "value": "12:00"
+            },
+            {
+              "type": "string",
+              "value": "12:15"
+            },
+            {
+              "type": "string",
+              "value": "12:15"
+            },
+            {
+              "type": "string",
+              "value": "12:30"
+            },
+            {
+              "type": "string",
+              "value": "12:30"
+            },
+            {
+              "type": "string",
+              "value": "12:45"
             },
             {
               "type": "string",
@@ -1139,97 +1567,6 @@
         },
         "optional": true
       },
-      "announcements": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "array",
-          "of": {
-            "type": "object",
-            "attributes": {
-              "title": {
-                "type": "objectAttribute",
-                "value": {
-                  "type": "string"
-                },
-                "optional": true
-              },
-              "visible": {
-                "type": "objectAttribute",
-                "value": {
-                  "type": "boolean"
-                },
-                "optional": true
-              },
-              "text": {
-                "type": "objectAttribute",
-                "value": {
-                  "type": "inline",
-                  "name": "blockContent"
-                },
-                "optional": true
-              }
-            },
-            "rest": {
-              "type": "object",
-              "attributes": {
-                "_key": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "optional": true
-      },
-      "sampleTraining": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "object",
-          "attributes": {
-            "asset": {
-              "type": "objectAttribute",
-              "value": {
-                "type": "object",
-                "attributes": {
-                  "_ref": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  },
-                  "_type": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string",
-                      "value": "reference"
-                    }
-                  },
-                  "_weak": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "boolean"
-                    },
-                    "optional": true
-                  }
-                },
-                "dereferencesTo": "sanity.fileAsset"
-              },
-              "optional": true
-            },
-            "_type": {
-              "type": "objectAttribute",
-              "value": {
-                "type": "string",
-                "value": "file"
-              }
-            }
-          }
-        },
-        "optional": true
-      },
       "imageGallery": {
         "type": "objectAttribute",
         "value": {
@@ -1306,14 +1643,14 @@
         },
         "optional": true
       },
-      "fileUploads": {
+      "uploadedDocuments": {
         "type": "objectAttribute",
         "value": {
           "type": "array",
           "of": {
             "type": "object",
             "attributes": {
-              "title": {
+              "label": {
                 "type": "objectAttribute",
                 "value": {
                   "type": "string"
@@ -1365,58 +1702,13 @@
                   }
                 },
                 "optional": true
-              }
-            },
-            "rest": {
-              "type": "object",
-              "attributes": {
-                "_key": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "optional": true
-      },
-      "faq": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "array",
-          "of": {
-            "type": "object",
-            "attributes": {
-              "columnTitle": {
-                "type": "objectAttribute",
-                "value": {
-                  "type": "string"
-                },
-                "optional": true
               },
-              "questions": {
+              "_type": {
                 "type": "objectAttribute",
                 "value": {
-                  "type": "array",
-                  "of": {
-                    "type": "object",
-                    "attributes": {
-                      "_key": {
-                        "type": "objectAttribute",
-                        "value": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "rest": {
-                      "type": "inline",
-                      "name": "faqObjectType"
-                    }
-                  }
-                },
-                "optional": true
+                  "type": "string",
+                  "value": "uploadedDocument"
+                }
               }
             },
             "rest": {
@@ -2602,6 +2894,58 @@
           "of": [
             {
               "type": "string",
+              "value": "9:00"
+            },
+            {
+              "type": "string",
+              "value": "9:15"
+            },
+            {
+              "type": "string",
+              "value": "9:30"
+            },
+            {
+              "type": "string",
+              "value": "9:45"
+            },
+            {
+              "type": "string",
+              "value": "10:00"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:45"
+            },
+            {
+              "type": "string",
+              "value": "11:00"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:45"
+            },
+            {
+              "type": "string",
+              "value": "12:00"
+            },
+            {
+              "type": "string",
               "value": "15:00"
             },
             {
@@ -2663,7 +3007,91 @@
           "of": [
             {
               "type": "string",
-              "value": "15:45"
+              "value": "9:00"
+            },
+            {
+              "type": "string",
+              "value": "9:15"
+            },
+            {
+              "type": "string",
+              "value": "9:30"
+            },
+            {
+              "type": "string",
+              "value": "9:45"
+            },
+            {
+              "type": "string",
+              "value": "10:00"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:15"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:30"
+            },
+            {
+              "type": "string",
+              "value": "10:45"
+            },
+            {
+              "type": "string",
+              "value": "11:00"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:15"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:30"
+            },
+            {
+              "type": "string",
+              "value": "11:45"
+            },
+            {
+              "type": "string",
+              "value": "12:00"
+            },
+            {
+              "type": "string",
+              "value": "12:15"
+            },
+            {
+              "type": "string",
+              "value": "12:15"
+            },
+            {
+              "type": "string",
+              "value": "12:30"
+            },
+            {
+              "type": "string",
+              "value": "12:30"
+            },
+            {
+              "type": "string",
+              "value": "12:45"
             },
             {
               "type": "string",
