@@ -88,6 +88,11 @@ export const kidsCourse2 = defineType({
       type: 'number',
     }),
     defineField({
+      name: 'url',
+      title: 'Odkaz na kurz',
+      type: 'string',
+    }),
+    defineField({
       name: 'swimmingPool',
       title: 'Bazén',
       type: 'reference',
