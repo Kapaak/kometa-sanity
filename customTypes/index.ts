@@ -1,6 +1,7 @@
 export * from './ageCategory';
 export * from './availableIcon';
 export * from './blockContent';
+export * from './dateRange';
 export * from './faq-object';
 export * from './imageAlt';
 export * from './lecture-frequency-pricing';

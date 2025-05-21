@@ -486,6 +486,13 @@
                       },
                       "optional": true
                     },
+                    "media": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "unknown"
+                      },
+                      "optional": true
+                    },
                     "hotspot": {
                       "type": "objectAttribute",
                       "value": {
@@ -738,6 +745,13 @@
                 },
                 "optional": true
               },
+              "media": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "unknown"
+                },
+                "optional": true
+              },
               "hotspot": {
                 "type": "objectAttribute",
                 "value": {
@@ -948,6 +962,13 @@
                           }
                         },
                         "dereferencesTo": "sanity.fileAsset"
+                      },
+                      "optional": true
+                    },
+                    "media": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "unknown"
                       },
                       "optional": true
                     },
@@ -1557,6 +1578,14 @@
           "type": "string"
         }
       },
+      "dateRange": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "inline",
+          "name": "dateRange"
+        },
+        "optional": true
+      },
       "skillRequirement": {
         "type": "objectAttribute",
         "value": {
@@ -1601,6 +1630,13 @@
                     }
                   },
                   "dereferencesTo": "sanity.imageAsset"
+                },
+                "optional": true
+              },
+              "media": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "unknown"
                 },
                 "optional": true
               },
@@ -1689,6 +1725,13 @@
                           }
                         },
                         "dereferencesTo": "sanity.fileAsset"
+                      },
+                      "optional": true
+                    },
+                    "media": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "unknown"
                       },
                       "optional": true
                     },
@@ -2092,6 +2135,36 @@
     }
   },
   {
+    "name": "dateRange",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "dateRange"
+          }
+        },
+        "dateFrom": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        "dateTo": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "infoBar",
     "type": "document",
     "attributes": {
@@ -2271,6 +2344,13 @@
               },
               "optional": true
             },
+            "media": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "unknown"
+              },
+              "optional": true
+            },
             "hotspot": {
               "type": "objectAttribute",
               "value": {
@@ -2337,6 +2417,13 @@
                   }
                 },
                 "dereferencesTo": "sanity.fileAsset"
+              },
+              "optional": true
+            },
+            "media": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "unknown"
               },
               "optional": true
             },
@@ -2540,6 +2627,13 @@
                         }
                       },
                       "dereferencesTo": "sanity.imageAsset"
+                    },
+                    "optional": true
+                  },
+                  "media": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "unknown"
                     },
                     "optional": true
                   },
@@ -3533,6 +3627,13 @@
               },
               "optional": true
             },
+            "media": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "unknown"
+              },
+              "optional": true
+            },
             "hotspot": {
               "type": "objectAttribute",
               "value": {
@@ -3675,6 +3776,13 @@
                   }
                 },
                 "dereferencesTo": "sanity.imageAsset"
+              },
+              "optional": true
+            },
+            "media": {
+              "type": "objectAttribute",
+              "value": {
+                "type": "unknown"
               },
               "optional": true
             },
@@ -3834,6 +3942,13 @@
               }
             },
             "dereferencesTo": "sanity.imageAsset"
+          },
+          "optional": true
+        },
+        "media": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "unknown"
           },
           "optional": true
         },

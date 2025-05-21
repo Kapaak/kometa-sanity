@@ -7,6 +7,12 @@ export const swimmingPoolDetail = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'dateRange',
+      title: 'Pololetí',
+      description: 'Pololetí, pro které jsou přihlášky otevřeny.',
+      type: 'dateRange',
+    }),
+    defineField({
       name: 'skillRequirement',
       title: 'Potřebné dovednosti',
       type: 'array',
