@@ -64,11 +64,6 @@ export default defineType({
       type: 'boolean',
       initialValue: false,
     }),
-    defineField({
-      name: 'location',
-      title: 'Lokalita bazénu',
-      type: 'geopoint',
-    }),
   ],
   preview: {
     select: {title: 'name'},
