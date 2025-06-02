@@ -153,6 +153,43 @@
     }
   },
   {
+    "name": "geopoint",
+    "type": "type",
+    "value": {
+      "type": "object",
+      "attributes": {
+        "_type": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "string",
+            "value": "geopoint"
+          }
+        },
+        "lat": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "lng": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        "alt": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      }
+    }
+  },
+  {
     "name": "lectureFrequencyPricing",
     "type": "type",
     "value": {
@@ -3827,27 +3864,6 @@
         },
         "optional": true
       },
-      "totalLength": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "number"
-        },
-        "optional": true
-      },
-      "depth": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "number"
-        },
-        "optional": true
-      },
-      "temperature": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "number"
-        },
-        "optional": true
-      },
       "isSchoolOrKindergartenAvailable": {
         "type": "objectAttribute",
         "value": {
@@ -3855,18 +3871,25 @@
         },
         "optional": true
       },
-      "location": {
+      "latLng": {
         "type": "objectAttribute",
         "value": {
           "type": "inline",
-          "name": "geopoint"
+          "name": "latLng"
+        },
+        "optional": true
+      },
+      "address": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
         },
         "optional": true
       }
     }
   },
   {
-    "name": "geopoint",
+    "name": "latLng",
     "type": "type",
     "value": {
       "type": "object",
@@ -3875,7 +3898,7 @@
           "type": "objectAttribute",
           "value": {
             "type": "string",
-            "value": "geopoint"
+            "value": "latLng"
           }
         },
         "lat": {
@@ -3886,13 +3909,6 @@
           "optional": true
         },
         "lng": {
-          "type": "objectAttribute",
-          "value": {
-            "type": "number"
-          },
-          "optional": true
-        },
-        "alt": {
           "type": "objectAttribute",
           "value": {
             "type": "number"
