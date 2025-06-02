@@ -17,21 +17,21 @@
     "sanity"
   ],
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.5",
-    "@sanity/locale-cs-cz": "^1.1.4",
-    "@sanity/vision": "^3.42.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanity": "^3.88.3",
-    "sanity-plugin-media": "^2.2.5",
+    "@phosphor-icons/react": "^2.1.10",
+    "@sanity/locale-cs-cz": "^1.1.19",
+    "@sanity/vision": "^3.90.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sanity": "^3.90.0",
+    "sanity-plugin-media": "^3.0.2",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
-    "@sanity/eslint-config-studio": "^4.0.0",
-    "@types/react": "^18.0.25",
-    "eslint": "^8.6.0",
-    "prettier": "^3.0.2",
-    "typescript": "^5.1.6"
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@types/react": "^19.1.6",
+    "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   },
   "prettier": {
     "semi": false,
