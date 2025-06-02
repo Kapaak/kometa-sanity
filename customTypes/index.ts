@@ -4,6 +4,7 @@ export * from './blockContent';
 export * from './dateRange';
 export * from './faq-object';
 export * from './imageAlt';
+export * from './latLng';
 export * from './lecture-frequency-pricing';
 export * from './price';
 export * from './rating';

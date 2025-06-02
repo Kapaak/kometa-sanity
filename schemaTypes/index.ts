@@ -9,6 +9,7 @@ import {
   lectureFrequencyPricing,
   priceType,
   dateRange,
+  latLngType,
 } from '../customTypes'
 import camps from './camps'
 import swimmingPool from './swimmingPool'
@@ -49,4 +50,5 @@ export const schemaTypes = [
   yearMonthRange,
   dateRange,
   lectureFrequencyPricing,
+  latLngType,
 ]
