@@ -34,29 +34,12 @@ export const swimmingPoolMainPage = defineType({
       ],
     }),
     defineField({
-      name: 'infoBar',
+      name: 'infoBars',
       title: 'Informační lišta',
       type: 'array',
       of: [
         {
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'title',
-              title: 'Titulek',
-              type: 'string',
-            }),
-            defineField({
-              name: 'text',
-              title: 'Text',
-              type: 'string',
-            }),
-            defineField({
-              name: 'visibility',
-              title: 'Viditelnost',
-              type: 'boolean',
-            }),
-          ],
+          type: 'infoBar',
         },
       ],
     }),

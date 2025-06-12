@@ -6,19 +6,15 @@ export const swimmingPoolInfoBar = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Titulek',
-      type: 'string',
-    }),
-    defineField({
-      name: 'text',
+      name: 'value',
       title: 'Text',
       type: 'string',
     }),
     defineField({
-      name: 'visibility',
+      name: 'visible',
       title: 'Viditelnost',
       type: 'boolean',
+      initialValue: false,
     }),
     defineField({
       name: 'swimmingPool',
@@ -30,7 +26,7 @@ export const swimmingPoolInfoBar = defineType({
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'value',
     },
   },
 })
