@@ -40,17 +40,6 @@ export const preliminaryCourse = defineType({
       },
     }),
     defineField({
-      name: 'slug',
-      title: 'Odkaz na kurz',
-      type: 'slug',
-      options: {
-        source: 'title',
-      },
-      description:
-        'Odkaz na kurz, který se zobrazí v URL adrese. Tlačítko Generate vygeneruje odkaz z Úvodního textu, ale lze vyplnit ručně bez generovaní.',
-      validation: (Rule) => Rule.required().error('Je nutné vyplnit odkaz na kurz'),
-    }),
-    defineField({
       title: 'Nastavit datum platnosti předběžného kurzu',
       description: 'V rozmezí dat od - do bude kurz zobrazen na webu.',
       name: 'activeDate',
