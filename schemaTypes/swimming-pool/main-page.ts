@@ -39,7 +39,8 @@ export const swimmingPoolMainPage = defineType({
       type: 'array',
       of: [
         {
-          type: 'infoBar',
+          type: 'reference',
+          to: [{type: 'infoBar'}],
         },
       ],
     }),
