@@ -76,12 +76,6 @@ export const kidsCourse2 = defineType({
       initialValue: false,
     }),
     defineField({
-      name: 'price',
-      title: 'Cena za kurz',
-      type: 'price',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'discount',
       description: 'Zadejte procentuální slevu pro cenu za pololetí a školní rok.',
       title: 'Sleva',
@@ -115,21 +109,20 @@ export const kidsCourse2 = defineType({
       media: 'swimmingPool.image',
       timeFrom: 'timeFrom',
       timeTo: 'timeTo',
-      price: 'price',
       discount: 'discount',
       isFull: 'isFull',
       dayId: 'dayId',
     },
     prepare(selection) {
-      const {media, timeFrom, timeTo, price, discount, isFull, dayId} = selection
+      const {media, timeFrom, timeTo, discount, isFull, dayId} = selection
       const timeRange = `${timeFrom} - ${timeTo}`
-      const priceLabel = `cena: ${joinValues([price?.priceSemester, price?.priceYear], {separator: '/'})} Kč`
+
       const discountLabel = discount ? `sleva: ${discount}%` : ''
       const available = isFull ? '🔴' : '🟢'
 
       return {
         title: joinValues([convertDayIdToName(dayId), available]),
-        subtitle: joinValues([timeRange, priceLabel, discountLabel], {separator: ', '}),
+        subtitle: joinValues([timeRange, discountLabel], {separator: ', '}),
         media,
       }
     },

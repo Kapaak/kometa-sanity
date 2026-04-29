@@ -2,12 +2,17 @@ import {defineField, defineType} from 'sanity'
 
 export const priceType = defineType({
   name: 'price',
-  title: 'Duration',
+  title: 'Cena',
   type: 'object',
   fields: [
     defineField({
-      name: 'priceSemester',
-      title: 'Cena za pololetí',
+      name: 'priceFirstHalf',
+      title: 'Cena za 1. pololetí',
+      type: 'number',
+    }),
+    defineField({
+      name: 'priceSecondHalf',
+      title: 'Cena za 2. pololetí',
       type: 'number',
     }),
     defineField({
@@ -17,5 +22,5 @@ export const priceType = defineType({
     }),
   ],
   // make the fields render next to each other
-  options: {columns: 2},
+  options: {columns: 3},
 })

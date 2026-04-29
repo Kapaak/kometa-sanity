@@ -8,7 +8,8 @@ type FaqPreviewProps = PreviewProps & {
   timeTo: string
   isFull?: boolean
   price: {
-    priceSemester?: number
+    priceFirstHalf?: number
+    priceSecondHalf?: number
     priceYear?: number
   }
   discount?: number
@@ -18,7 +19,13 @@ export function CoursePreview(props: FaqPreviewProps) {
   const {dayId, timeTo, timeFrom, isFull, price, discount} = props
 
   const timeRange = `${timeFrom} - ${timeTo}`
-  const priceLabel = `cena: ${joinValues([price?.priceSemester, price?.priceYear], {separator: '/'})} Kč`
+  const priceValues = joinValues(
+    [price?.priceFirstHalf, price?.priceSecondHalf, price?.priceYear],
+    {
+      separator: '/',
+    },
+  )
+  const priceLabel = priceValues ? `cena: ${priceValues} Kč` : 'cena: dle ceníku kategorie'
   const discountLabel = discount ? `sleva: ${discount}%` : ''
 
   const available = isFull ? 'Plno' : 'Volno'

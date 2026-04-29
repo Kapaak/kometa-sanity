@@ -1,11 +1,11 @@
-import {Image} from '@phosphor-icons/react'
 import {defineType} from 'sanity'
+import {ImageIcon} from '@sanity/icons'
 
 export const imageAlt = defineType({
   name: 'imageAlt',
   title: 'Image',
   type: 'image',
-  icon: Image,
+  icon: ImageIcon,
   options: {
     hotspot: true,
   },

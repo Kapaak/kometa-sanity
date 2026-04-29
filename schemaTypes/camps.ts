@@ -1,11 +1,11 @@
 import {defineField, defineType} from 'sanity'
-import {Tent as icon} from '@phosphor-icons/react'
+import {CalendarIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'camp',
   title: 'Tábory',
   type: 'document',
-  icon,
+  icon: CalendarIcon,
   fields: [
     defineField({
       name: 'name',

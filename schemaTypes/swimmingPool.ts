@@ -1,11 +1,11 @@
 import {defineField, defineType} from 'sanity'
-import {SwimmingPool as icon} from '@phosphor-icons/react'
+import {EarthGlobeIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'swimmingPool',
   title: 'Kde plaveme',
   type: 'document',
-  icon,
+  icon: EarthGlobeIcon,
   fields: [
     defineField({
       name: 'name',

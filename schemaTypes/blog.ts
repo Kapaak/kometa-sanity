@@ -1,10 +1,10 @@
-import {Notebook} from '@phosphor-icons/react'
 import {defineField, defineType} from 'sanity'
+import {BookIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'blog',
   title: 'Blog',
-  icon: Notebook,
+  icon: BookIcon,
   type: 'document',
   fields: [
     defineField({

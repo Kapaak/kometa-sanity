@@ -24,6 +24,7 @@ import {
   swimmingPoolDetail,
   swimmingPoolMainPage,
 } from './swimming-pool'
+import {courseCategoryPricing} from './courseCategoryPricing'
 
 export const schemaTypes = [
   //Document types
@@ -38,6 +39,7 @@ export const schemaTypes = [
   swimmingPoolDetail,
   preliminaryCourse,
   swimmingPoolMainPage,
+  courseCategoryPricing,
 
   //Custom types
   imageAlt,

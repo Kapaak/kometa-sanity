@@ -1,5 +1,5 @@
-import {PersonSimpleSwim} from '@phosphor-icons/react'
 import {StructureBuilder} from 'sanity/structure'
+import {EarthGlobeIcon} from '@sanity/icons'
 import {swimmingCategories} from '../constants/categories'
 
 const filterTypes = [
@@ -17,6 +17,7 @@ const filterTypes = [
   'preliminaryCourse',
   'swimmingPoolDetail',
   'swimmingPoolMainPage',
+  'courseCategoryPricing',
 ]
 
 export const structure = (S: StructureBuilder) =>
@@ -25,7 +26,7 @@ export const structure = (S: StructureBuilder) =>
     .items([
       S.listItem()
         .title('Detail bazénu')
-        .icon(PersonSimpleSwim)
+        .icon(EarthGlobeIcon)
         .child(
           S.documentTypeList('swimmingPool')
             .title('Seznam bazénů')
@@ -81,6 +82,31 @@ export const structure = (S: StructureBuilder) =>
                                       categoryId: category.name,
                                     }),
                                   ]),
+                              ),
+                          ),
+                        ),
+                    ),
+                  S.listItem()
+                    .title('Ceník kategorií')
+                    .child(
+                      S.list()
+                        .title('Kategorie')
+                        .items(
+                          swimmingCategories.map((category) =>
+                            S.listItem()
+                              .title(category.label)
+                              .child(() =>
+                                S.documentWithInitialValueTemplate(
+                                  'course-category-pricing-template',
+                                  {
+                                    swimmingPoolId,
+                                    categoryId: category.name,
+                                  },
+                                )
+                                  .documentId(
+                                    `courseCategoryPricing-${swimmingPoolId}-${category.name}`,
+                                  )
+                                  .title(category.label),
                               ),
                           ),
                         ),
